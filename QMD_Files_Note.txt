@@ -1,0 +1,22 @@
+QMD Files Are QGIS Metadata — Not Quarto Documents
+====================================================
+
+A common misconception: .qmd typically means "Quarto Markdown" in data science
+contexts. In this project, they are actually QGIS layer metadata XML files — the
+<!DOCTYPE qgis> header confirms this.
+
+QGIS uses .qmd for "QGIS Metadata Document" (layer-level metadata, separate
+from .qgs/.qgz project files).
+
+Files in this project:
+  - Seating_Slip_Update.qmd   (QGIS 3.36 layer metadata)
+  - Seat_New.json.qmd         (QGIS 3.36 layer metadata)
+
+Both store:
+  - Coordinate Reference System: Popular Visualisation CRS / Mercator (Web Mercator)
+  - Projection: +proj=merc +a=6378137 +b=6378137
+  - Dataset type and extent metadata
+
+If someone opens these expecting Quarto notebooks, they will get XML. If someone
+deletes them thinking they are unimportant, they lose the CRS and metadata
+definitions that document how the spatial data was originally projected.
