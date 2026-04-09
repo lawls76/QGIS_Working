@@ -2,7 +2,7 @@
 
 ## Analogy: The Blueprint-to-Brochure Pipeline
 
-Think of this like an architecture firm designing a venue:
+Think of this like an architecture firm designing/planning a venue event:
 
 - **QGIS is the drafting table** — where a GIS analyst drew the seating polygons (shapes representing each seat/slip) on top of an aerial photo of The Anchor marina, assigned ticket numbers, prices, and descriptions to each polygon, then exported everything.
 - **The Python/Flask app is the print shop** — it takes those exported drawings and turns them into an interactive web brochure that customers can click on.
